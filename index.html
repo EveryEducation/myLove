@@ -60,7 +60,7 @@
                     </font>
                     </p>
                     <div class="sayImages">
-                        <a href="gallery.html" target="_blank"><img src="images/11.JPG" alt=""></a>
+                        <a href="#" target="_blank"><img id="mouth" src="images/011.JPG" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -72,9 +72,24 @@
         </div>
 
     </div>
+    <div style="text-align:center;font-size: 14px">
+        <span><a href="#" target="_blank">Aron to Jane</a></span>
+        <span style="text-align:center;font-size: 14px">始于2015年8月20日-七月初七</span>
+        <!--<div>
+            <span>今天是</span>
+            <span id="timeBox"></span>
+        </div>-->
+    </div>
     <script>
-    </script>
-    <script>
+        var Nowdate = new Date();
+        var M = Number(Nowdate.getMonth()) + 1
+            // alert(Nowdate.getMonth() + "月," + Nowdate.getDate() + "号,星期" + Nowdate.getDay());
+            // alert(M + "月");
+
+        document.getElementById("mouth").src = "images/0" + M + ".JPG";
+        var tr = Nowdate.getMonth() + "月," + Nowdate.getDate() + "号,星期" + Nowdate.getDay();
+
+        $("#timeBox").html(tr);
         (function() {
             var canvas = $('#canvas');
 
@@ -235,9 +250,7 @@
     </script>
 
 
-    <div style="text-align:center;font-size: 40px">
-        <p><a href="#" target="_blank">Aron to Jane</a></p>
-    </div>
+
 </body>
 
 </html>

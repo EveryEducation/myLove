@@ -45,6 +45,8 @@ function timeElapse(date) {
     var date3 = date2.getTime() - new Date(date1).getTime(); //时间差的毫秒数        
 
     //------------------------------  
+    var Nowdate = new Date();
+
 
     //计算出相差天数  
     var days = Math.floor(date3 / (24 * 3600 * 1000))
