@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="renxi/jquery.min.js"></script>
+    <script type="text/javascript" src="renxi/md5.js"></script>
     <script type="text/javascript">
         function validate() {
 
@@ -16,6 +19,12 @@
             alert("shenme");
 
         }
+
+        function md5() {
+            var txt = document.getElementById("main").value;
+            var hash = $.md5(txt);
+            alert(hash)
+        }
     </script>
 </head>
 
@@ -25,6 +34,10 @@
         <input type="text" id="name">
         <input type="text" id="password">
     </form>
+    <div>
+        <input type="text" id="main">
+        <button type="submit" class="btn btn-primary btn-block btn-large" onclick="return md5()">获取加密结果</button>
+    </div>
 </body>
 
 </html>

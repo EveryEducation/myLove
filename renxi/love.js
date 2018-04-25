@@ -1,4 +1,5 @@
-﻿(function(window) {
+﻿// 借兄弟你的代码拿来哄女朋友开心，大兄弟你别介意哈
+(function(window) {
 
     function random(min, max) {
         return min + Math.floor(Math.random() * (max - min + 1));

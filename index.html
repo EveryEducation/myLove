@@ -8,6 +8,7 @@
     <meta name="renderer" content="webkit">
     <meta name="author" content="Aron">
     <title>love story</title>
+    <!--声明：原代码不是本人的，本人拿来修改并用于个人，造成的后果本人不承担任何法律责任-->
     <link rel="icon" type="" href="https://cdn-img.easyicon.net/png/11524/1152424.gif">
     <!--<link rel="icon" href="favicon.ico">-->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -140,12 +141,12 @@
             height: 100%;
             font-family: 'Open Sans', sans-serif;
             background: #FFe;
-            /*background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+            background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
             background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
             background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
             background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -ms-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
             background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
-            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756', GradientType=1);*/
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756', GradientType=1);
         }
         
         .login {
@@ -173,7 +174,7 @@
             border: none;
             outline: none;
             padding: 10px;
-            font-size: 26px;
+            font-size: 20px;
             color: #fff;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(0, 0, 0, 0.2);
@@ -206,13 +207,11 @@
             var aN = name.value;
             // aK = [parseInt(aP[0]) + parseInt(aP[1]), parseInt(aP[1]) + parseInt(aP[2]), parseInt(aP[2]) + parseInt(aP[3]), parseInt(aP[3]) + parseInt(aP[4]), parseInt(aP[4]) + parseInt(aP[5])];
             // key = aK.join("-");
-            // alert(key);
-            // alert(aP + aN);
-            var hash = $.md5(aP + aN);
-            var key1 = "75550d82fba3fc78408673dcb59896c3";
-            var key2 = "08038dda68a8e1f7c94b928a538b86a0";
+            // alert(aP + "-" + aN);
+            var hash = $.md5(aP + "-" + aN);
+            var key1 = "2859d5fa08711dfc66bd7d0b18f7b6e3";
+            var key2 = "4a82452d049ca485fbf8e170f5eaa6bc";
             // alert(hash);
-            // alert(aP[2]);
             if (name.value == "Jane" && hash == key1) {
 
                 document.form[0].action = "indexMain.html";
@@ -240,7 +239,6 @@
                 <input type="text" value="Jane" id="u" placeholder="用户名" required="required" />
                 <input type="password" value="" id="p" placeholder="密码（Jane的生日）" required="required" />
                 <button type="submit" class="btn btn-primary btn-block btn-large" onclick="return validate()">登录</button>
-
             </div>
         </form>
     </div>

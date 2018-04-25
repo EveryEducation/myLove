@@ -1,5 +1,5 @@
 /*
- * http://www.mycodes.net
+ * http://www.mycodes.net实在是不知道怎么写了，借用一下，大哥别介意哈
  */
 
 // variables
